@@ -324,10 +324,12 @@ export default function Home() {
               className="bg-gray-50 rounded-2xl overflow-hidden"
             >
               <div className="h-48 overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Customer story - young professional with electric scooter" 
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={192}
                 />
               </div>
               <div className="p-6">
@@ -348,10 +350,12 @@ export default function Home() {
               className="bg-gray-50 rounded-2xl overflow-hidden"
             >
               <div className="h-48 overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Technology team working on sustainable future" 
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={192}
                 />
               </div>
               <div className="p-6">
@@ -372,10 +376,12 @@ export default function Home() {
               className="bg-gray-50 rounded-2xl overflow-hidden"
             >
               <div className="h-48 overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                   alt="Innovation team discussing future of electric mobility" 
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={192}
                 />
               </div>
               <div className="p-6">
@@ -383,7 +389,7 @@ export default function Home() {
                   An Incremental step ahead
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Explore our latest technological breakthroughs and what's coming next in electric mobility.
+                  Explore our latest technological breakthroughs and what&apos;s coming next in electric mobility.
                 </p>
               </div>
             </motion.div>
@@ -431,10 +437,12 @@ export default function Home() {
               className="bg-white rounded-2xl p-6 shadow-sm"
             >
               <div className="h-40 rounded-xl mb-6 overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                   alt="Smart motorcycle helmet with advanced features" 
                   className="w-full h-full object-cover"
+                  width={400}
+                  height={160}
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -456,10 +464,12 @@ export default function Home() {
               className="bg-white rounded-2xl p-6 shadow-sm"
             >
               <div className="h-40 rounded-xl mb-6 overflow-hidden">
-                <img 
+                <Image
                   src="https://mgmotor.scene7.com/is/image/mgmotor/evpedia-bn-0060?$mg-rgb-4k-image-responsive$" 
                   alt="Portable EV charger and charging accessories" 
                   className="w-full h-full object-cover"
+                  width={400}
+                  height={160}
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
@@ -481,10 +491,12 @@ export default function Home() {
               className="bg-white rounded-2xl p-6 shadow-sm"
             >
               <div className="h-40 rounded-xl mb-6 overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                   alt="Premium motorcycle accessories and gear" 
                   className="w-full h-full object-cover"
+                  width={400}
+                  height={160}
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">

@@ -42,10 +42,9 @@ const Hero = () => {
             >
               <motion.h1 
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-6 lg:mb-6"
-                style={{ 
-                  transform: `translateY(${scrollY * 0.1}px)`,
-                  opacity: Math.max(0, 1 - scrollY * 0.002)
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <span className="block text-white">Introducing</span>
                 <span className="block text-white font-extrabold">
@@ -54,20 +53,18 @@ const Hero = () => {
               </motion.h1>
               <motion.p 
                 className="text-sm sm:text-base md:text-lg lg:text-xl text-white mb-6 sm:mb-8 lg:mb-10 max-w-2xl font-light leading-relaxed"
-                style={{ 
-                  transform: `translateY(${scrollY * 0.15}px)`,
-                  opacity: Math.max(0, 1 - scrollY * 0.0025)
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
               >
                 With <span className="font-semibold text-white">Battery as a Service</span>,<br className="hidden sm:block" />
                 buy Rizta starting at <span className="font-bold text-white text-lg sm:text-xl lg:text-2xl">₹75,999</span><span className="text-white/80">*</span>
               </motion.p>
               <motion.div 
                 className="flex flex-col sm:flex-row gap-4"
-                style={{ 
-                  transform: `translateY(${scrollY * 0.2}px)`,
-                  opacity: Math.max(0, 1 - scrollY * 0.003)
-                }}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Link
                   href="/baas"
@@ -95,10 +92,9 @@ const Hero = () => {
           >
             <motion.h1 
               className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-3 sm:mb-4"
-              style={{ 
-                transform: `translateY(${scrollY * 0.1}px)`,
-                opacity: Math.max(0, 1 - scrollY * 0.002)
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
               <span className="block text-white">Introducing</span>
               <span className="block text-white font-extrabold">
@@ -107,20 +103,18 @@ const Hero = () => {
             </motion.h1>
             <motion.p 
               className="text-sm sm:text-base text-white mb-4 sm:mb-6 font-light leading-relaxed"
-              style={{ 
-                transform: `translateY(${scrollY * 0.15}px)`,
-                opacity: Math.max(0, 1 - scrollY * 0.0025)
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               With <span className="font-semibold text-white">Battery as a Service</span>,<br />
               buy Rizta starting at <span className="font-bold text-white text-lg sm:text-xl">₹75,999</span><span className="text-white/80">*</span>
             </motion.p>
             <motion.div 
               className="flex"
-              style={{ 
-                transform: `translateY(${scrollY * 0.2}px)`,
-                opacity: Math.max(0, 1 - scrollY * 0.003)
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Link
                 href="/baas"
@@ -140,10 +134,9 @@ const Hero = () => {
       >
         <motion.div 
           className="flex space-x-4"
-          style={{ 
-            transform: `translateY(${scrollY * 0.3}px)`,
-            opacity: Math.max(0, 1 - scrollY * 0.004)
-          }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
         >
           <Link href="/rizta" className="text-gray-400 hover:text-white transition-colors duration-300 px-4 py-2 rounded-full text-sm">
             Rizta
@@ -170,10 +163,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
           className="bg-black/60 backdrop-blur-md rounded-2xl p-4 flex items-center space-x-4 max-w-sm cursor-pointer hover:bg-black/70 transition-all duration-300"
-          style={{ 
-            transform: `translateY(${scrollY * 0.25}px)`,
-            opacity: Math.max(0, 1 - scrollY * 0.0035)
-          }}
         >
           {/* Video Thumbnail */}
           <div className="w-20 h-16 rounded-lg flex-shrink-0 relative overflow-hidden">
@@ -205,10 +194,6 @@ const Hero = () => {
       {/* Mobile Video Discovery Card - Full Width with Parallax */}
       <motion.div 
         className="absolute bottom-4 left-4 right-4 z-10 lg:hidden"
-        style={{ 
-          transform: `translateY(${scrollY * 0.2}px)`,
-          opacity: Math.max(0, 1 - scrollY * 0.003)
-        }}
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -220,24 +205,30 @@ const Hero = () => {
           <div className="flex items-center space-x-2 mb-3">
             <div className="flex -space-x-2">
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
                   alt="User 1" 
                   className="w-full h-full object-cover"
+                  width={32}
+                  height={32}
                 />
               </div>
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1494790108755-2616c64c8c2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
                   alt="User 2" 
                   className="w-full h-full object-cover"
+                  width={32}
+                  height={32}
                 />
               </div>
               <div className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
-                <img 
+                <Image
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
                   alt="User 3" 
                   className="w-full h-full object-cover"
+                  width={32}
+                  height={32}
                 />
               </div>
             </div>
