@@ -193,7 +193,7 @@ const Hero = () => {
 
       {/* Mobile Video Discovery Card - Full Width with Parallax */}
       <motion.div 
-        className="absolute bottom-4 left-4 right-4 z-10 lg:hidden"
+        className="absolute bottom-7 left-4 right-4 z-10 lg:hidden"
       >
         <motion.div
           initial={{ opacity: 0, y: 20 }}
