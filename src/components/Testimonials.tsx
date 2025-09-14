@@ -38,42 +38,42 @@ const Testimonials: React.FC = () => {
     { 
       name: "45 Degrees°", 
       icon: "📐",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "Cooperative", 
       icon: "⚡",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "CoreOS", 
       icon: "⚫",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "Frequencli", 
       icon: "📊",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "LaunchSimple", 
       icon: "🚀",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "45 Degrees°", 
       icon: "📐",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "Cooperative", 
       icon: "⚡",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     },
     { 
       name: "CoreOS", 
       icon: "⚫",
-      className: "text-gray-600 font-semibold"
+      className: "text-black font-semibold"
     }
   ];
 
@@ -260,6 +260,12 @@ const Testimonials: React.FC = () => {
           </p>
           
           <div className="relative overflow-hidden">
+            {/* Left fade gradient */}
+            <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Right fade gradient */}
+            <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+            
             <motion.div
               className="flex items-center gap-12 whitespace-nowrap"
               animate={{
@@ -280,7 +286,7 @@ const Testimonials: React.FC = () => {
                   key={`first-${index}`}
                   className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
                 >
-                  <span className="text-lg">{brand.icon}</span>
+                  <span className="text-lg text-black">{brand.icon}</span>
                   <span className={brand.className}>{brand.name}</span>
                 </div>
               ))}
@@ -291,7 +297,7 @@ const Testimonials: React.FC = () => {
                   key={`second-${index}`}
                   className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
                 >
-                  <span className="text-lg">{brand.icon}</span>
+                  <span className="text-lg text-black">{brand.icon}</span>
                   <span className={brand.className}>{brand.name}</span>
                 </div>
               ))}
