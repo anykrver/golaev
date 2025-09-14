@@ -10,6 +10,7 @@ import KeyFeatures from '@/components/KeyFeatures';
 import FAQ from '@/components/FAQ';
 import WhyChooseGolaEV from '@/components/WhyChooseGolaEV';
 import AtherSpace from '@/components/AtherSpace';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
 
@@ -300,118 +301,8 @@ export default function Home() {
       {/* Key Features Section */}
       <KeyFeatures />
 
-      {/* Stories Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Stories at GolaEV
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl overflow-hidden"
-            >
-              <div className="h-48 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Customer story - young professional with electric scooter" 
-                  className="w-full h-full object-cover"
-                  width={600}
-                  height={192}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  From concept to the first ride
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Discover how GolaEV transformed urban mobility through innovation and customer-centric design.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl overflow-hidden"
-            >
-              <div className="h-48 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Technology team working on sustainable future" 
-                  className="w-full h-full object-cover"
-                  width={600}
-                  height={192}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Racing towards a sustainable future
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Learn about our commitment to sustainable transportation and clean energy solutions.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-gray-50 rounded-2xl overflow-hidden"
-            >
-              <div className="h-48 overflow-hidden">
-                <Image
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Innovation team discussing future of electric mobility" 
-                  className="w-full h-full object-cover"
-                  width={600}
-                  height={192}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  An Incremental step ahead
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Explore our latest technological breakthroughs and what&apos;s coming next in electric mobility.
-                </p>
-              </div>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Link
-              href="/stories"
-              className="inline-flex items-center text-gray-900 font-medium hover:text-gray-700 transition-colors border-b-2 border-gray-900 pb-1"
-            >
-              View all stories
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* Experience Enhancement Section */}
       <section className="py-20 bg-gray-50">
