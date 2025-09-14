@@ -35,14 +35,46 @@ const Testimonials: React.FC = () => {
   ];
 
   const brands = [
-    { name: "45 Degrees°" },
-    { name: "Cooperative" },
-    { name: "CoreOS" },
-    { name: "Frequencli" },
-    { name: "LaunchSimple" },
-    { name: "45 Degrees°" },
-    { name: "Cooperative" },
-    { name: "CoreOS" }
+    { 
+      name: "45 Degrees°", 
+      icon: "📐",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "Cooperative", 
+      icon: "⚡",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "CoreOS", 
+      icon: "⚫",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "Frequencli", 
+      icon: "📊",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "LaunchSimple", 
+      icon: "🚀",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "45 Degrees°", 
+      icon: "📐",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "Cooperative", 
+      icon: "⚡",
+      className: "text-gray-600 font-semibold"
+    },
+    { 
+      name: "CoreOS", 
+      icon: "⚫",
+      className: "text-gray-600 font-semibold"
+    }
   ];
 
   return (
@@ -227,19 +259,43 @@ const Testimonials: React.FC = () => {
             As seen on:
           </p>
           
-          <div className="flex flex-wrap items-center gap-8 opacity-60">
-            {brands.map((brand, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              >
-                <span className="text-gray-400 font-medium text-sm">{brand.name}</span>
-              </motion.div>
-            ))}
+          <div className="relative overflow-hidden">
+            <motion.div
+              className="flex items-center gap-12 whitespace-nowrap"
+              animate={{
+                x: ["-50%", "0%"]
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear"
+                }
+              }}
+            >
+              {/* First set of brands */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`first-${index}`}
+                  className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+                >
+                  <span className="text-lg">{brand.icon}</span>
+                  <span className={brand.className}>{brand.name}</span>
+                </div>
+              ))}
+              
+              {/* Duplicate set for seamless loop */}
+              {brands.map((brand, index) => (
+                <div
+                  key={`second-${index}`}
+                  className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+                >
+                  <span className="text-lg">{brand.icon}</span>
+                  <span className={brand.className}>{brand.name}</span>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </motion.div>
       </div>
