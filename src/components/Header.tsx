@@ -145,8 +145,14 @@ const Header = () => {
               ))}            
             </div>
 
-            {/* Mobile menu button */}
-            <div className="lg:hidden">
+            {/* Mobile menu button and Enquire button */}
+            <div className="lg:hidden flex items-center space-x-3">
+              <Link
+                href="/enquire"
+                className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
+              >
+                Enquire now
+              </Link>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-800 hover:text-gray-600 p-2"

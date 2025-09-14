@@ -27,6 +27,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'mgmotor.scene7.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

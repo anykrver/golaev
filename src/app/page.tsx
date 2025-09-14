@@ -438,7 +438,7 @@ export default function Home() {
             >
               <div className="h-40 rounded-xl mb-6 overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  src="https://motorcycle-soul.com/34721-thickbox_default/premier-devil-ev-6-blue-yellow-2206-helmet.jpg" 
                   alt="Smart motorcycle helmet with advanced features" 
                   className="w-full h-full object-cover"
                   width={400}
