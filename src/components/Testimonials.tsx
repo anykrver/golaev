@@ -95,13 +95,13 @@ const Testimonials: React.FC = () => {
 
         {/* Testimonials Grid Layout */}
         <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
-          {/* Top Left Testimonial */}
+          {/* Mobile Order: 1st - Amelia Hart */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl"
+            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl order-1 lg:order-1"
           >
             {/* Star Rating */}
             <div className="flex items-center mb-6">
@@ -133,13 +133,13 @@ const Testimonials: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Top Right Testimonial */}
+          {/* Mobile Order: 2nd - Daniel Rees */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl"
+            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl order-2 lg:order-2"
           >
             {/* Star Rating */}
             <div className="flex items-center mb-6">
@@ -171,13 +171,50 @@ const Testimonials: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Bottom Right Testimonial */}
+          {/* Mobile Order: 3rd - Julian Meyer (Featured) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="lg:col-start-2 lg:row-start-1 lg:row-span-2 relative order-3 lg:order-2"
+          >
+            <div className="relative bg-gray-800 rounded-3xl overflow-hidden h-full min-h-[500px]">
+              <Image
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Julian Meyer - Partner"
+                fill
+                className="object-cover"
+              />
+              
+              {/* Overlay with testimonial info */}
+              <div className="absolute bottom-8 left-8 right-8">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-white">
+                    <Image
+                      src={testimonials[2].image}
+                      alt={testimonials[2].name}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white text-lg">{testimonials[2].name}</div>
+                    <div className="text-gray-300 text-sm">{testimonials[2].company}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Mobile Order: 4th - Sophie Lang */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl"
+            className="lg:col-span-1 bg-gray-50 p-8 rounded-2xl order-4 lg:order-3"
           >
             {/* Star Rating */}
             <div className="flex items-center mb-6">
@@ -205,43 +242,6 @@ const Testimonials: React.FC = () => {
               <div>
                 <div className="font-semibold text-gray-900">{testimonials[3].name}</div>
                 <div className="text-gray-600 text-sm">{testimonials[3].company}</div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Central Featured Image with Testimonial */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="lg:col-start-2 lg:row-start-1 lg:row-span-2 relative"
-          >
-            <div className="relative bg-gray-800 rounded-3xl overflow-hidden h-full min-h-[500px]">
-              <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Julian Meyer - Partner"
-                fill
-                className="object-cover"
-              />
-              
-              {/* Overlay with testimonial info */}
-              <div className="absolute bottom-8 left-8 right-8">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden mr-4 border-2 border-white">
-                    <Image
-                      src={testimonials[2].image}
-                      alt={testimonials[2].name}
-                      width={48}
-                      height={48}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white text-lg">{testimonials[2].name}</div>
-                    <div className="text-gray-300 text-sm">{testimonials[2].company}</div>
-                  </div>
-                </div>
               </div>
             </div>
           </motion.div>
@@ -284,7 +284,7 @@ const Testimonials: React.FC = () => {
               {brands.map((brand, index) => (
                 <div
                   key={`first-${index}`}
-                  className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
+                  className="flex items-center gap-3 opacity-100 hover:opacity-100 transition-opacity duration-300 flex-shrink-0"
                 >
                   <span className="text-lg text-black">{brand.icon}</span>
                   <span className={brand.className}>{brand.name}</span>
