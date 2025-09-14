@@ -173,12 +173,8 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 bg-white lg:hidden sticky top-0"
           >
-            {/* Header with Logo and Close Button */}
-            <div className="flex justify-between items-center p-6 border-b border-gray-100">
-    
-              <div className="text-xl font-bold text-black tracking-wider">
-                GOLAEV
-              </div>
+            {/* Header with Close Button */}
+            <div className="flex justify-end items-center p-6 border-b border-gray-100">
               <button
                 onClick={() => setIsMenuOpen(false)}
                 className="p-2 text-gray-600 hover:text-gray-800"
